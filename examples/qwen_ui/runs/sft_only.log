@@ -1,0 +1,19 @@
+模型参数 793,984，总步数 1500
+    step 100/1500 loss 0.442 占比 sft 1.00 rl 0.00
+    step 200/1500 loss 0.394 占比 sft 1.00 rl 0.00
+    step 300/1500 loss 0.312 占比 sft 1.00 rl 0.00
+    step 400/1500 loss 0.169 占比 sft 1.00 rl 0.00
+    step 500/1500 loss 0.124 占比 sft 1.00 rl 0.00
+    step 600/1500 loss 0.106 占比 sft 1.00 rl 0.00
+    step 700/1500 loss 0.097 占比 sft 1.00 rl 0.00
+  [eval SFT 中途 @750] single p@1 0.062 p@4 0.188  seen_pair p@1 0.008 p@4 0.031  held_pair p@1 0.016 p@4 0.062
+    step 800/1500 loss 0.083 占比 sft 1.00 rl 0.00
+    step 900/1500 loss 0.075 占比 sft 1.00 rl 0.00
+    step 1000/1500 loss 0.066 占比 sft 1.00 rl 0.00
+    step 1100/1500 loss 0.047 占比 sft 1.00 rl 0.00
+    step 1200/1500 loss 0.062 占比 sft 1.00 rl 0.00
+    step 1300/1500 loss 0.048 占比 sft 1.00 rl 0.00
+    step 1400/1500 loss 0.035 占比 sft 1.00 rl 0.00
+    step 1500/1500 loss 0.031 占比 sft 1.00 rl 0.00
+  [eval SFT 后 @1500] single p@1 0.430 p@4 0.750  seen_pair p@1 0.172 p@4 0.438  held_pair p@1 0.102 p@4 0.281
+  完成，用时 885s

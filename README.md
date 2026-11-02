@@ -46,3 +46,7 @@ python3 -m venv .venv
 - `unified.py` 是算法本体（样本格式、加权损失、MaxRL 权重、混合采样、策略滞后）。`pipeline.py` 是读配比曲线的单循环训练器，`configs/` 是分阶段与统一两份配置。`train.py` 是三种练法的并排对照。`check.py` 是七条自检。`task.py`、`model.py` 是任务与模型。
 - `verify.py` 为运行级验证，`docs/verification.md` 为它和 `check.py` 的实际运行记录。
 - `docs/blog-revised-marked.md` 为带编辑标记的博客修订稿，`docs/appendix-revised.md` 为按本代码重写的附录。
+
+- `examples/qwen_ui/` 是在 Hugging Face 因果语言模型（含 Qwen 系列）上做 UI 编辑 SFT + RL 的示例，含可验证的任务、训练器、自检和一次小模型的运行记录，详见该目录的 README。
+- `docs/appendix-qwen-ui.md` 是用 Qwen 做 UI 编辑模型后训练的独立附录，覆盖思路、管线、数据格式、算法实现、配比轨迹、调参和基准测试。
+- `four_stages.py` 是最短的入口，用一份 CPU 上几分钟跑完的代码演示五个公式与四个阶段的套用，运行记录见 `docs/four_stages_runs.md`。

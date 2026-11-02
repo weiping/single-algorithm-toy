@@ -109,6 +109,7 @@ def run(spec, seed, args, trace=None):
     opt = torch.optim.AdamW(model.parameters(), lr=sched.lr(0), weight_decay=0.0)
     gen_model, rl_updates, last_sync = copy.deepcopy(model), 0, 0
     stale, log = [], []
+    cum_want, cum_got = {}, {}
     t0 = time.time()
     for t in range(sched.total + 1):
         if t in sched.eval_at:
@@ -147,11 +148,15 @@ def run(spec, seed, args, trace=None):
             for s, f in fr.items():
                 if s == n or f <= 0:
                     continue
+                # 按累计 token 取整：只补欠账，小比例下也不会因为每步至少加一条而偏高
+                cum_want[s] = cum_want.get(s, 0.0) + f * total_tok
                 got = 0
-                while got < f * total_tok:
+                while cum_got.get(s, 0) < cum_want[s]:
                     ex = sources[s]()
                     examples.append(ex)
-                    got += U.loss_tokens(ex)
+                    lt = U.loss_tokens(ex)
+                    cum_got[s] = cum_got.get(s, 0) + lt
+                    got += lt
                 row["tok"][s] = got
         else:
             examples = draw_mixed_batch(fr, sources, T, rng_mix, args.batch, row["tok"])

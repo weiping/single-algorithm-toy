@@ -1,0 +1,7 @@
+{
+  "total_steps": 60,
+  "mix_progress": [[0,0],[1,0.01]],
+  "lr": [[0, 1e-4]],
+  "eval_at": [0, 60],
+  "eval_names": ["RL 前", "RL 后"]
+}

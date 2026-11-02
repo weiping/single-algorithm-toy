@@ -49,4 +49,5 @@ python3 -m venv .venv
 
 - `examples/qwen_ui/` 是在 Hugging Face 因果语言模型（含 Qwen 系列）上做 UI 编辑 SFT + RL 的示例，含可验证的任务、训练器、自检和一次小模型的运行记录，详见该目录的 README。
 - `docs/appendix-qwen-ui.md` 是用 Qwen 做 UI 编辑模型后训练的独立附录，覆盖思路、管线、数据格式、算法实现、配比轨迹、调参和基准测试。
+- `docs/appendix-reproduction.md` 是「复现论文」的独立附录，逐条对照论文的实验，说明这份代码做到了哪一步、哪些差距来自哪里，以及要真正复现需要换什么。
 - `four_stages.py` 是最短的入口，用一份 CPU 上几分钟跑完的代码演示五个公式与四个阶段的套用，运行记录见 `docs/four_stages_runs.md`。

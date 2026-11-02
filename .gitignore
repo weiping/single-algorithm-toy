@@ -4,3 +4,7 @@ __pycache__/
 /results.json
 .pi/
 .DS_Store
+
+# 参考论文原文，仅本地留存，不入库
+docs/2602.02710.pdf
+docs/2610.40564.pdf
